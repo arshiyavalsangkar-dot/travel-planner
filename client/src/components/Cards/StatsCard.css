@@ -1,0 +1,125 @@
+.stats-card {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(12px);
+    border-radius: 20px;
+    padding: 22px;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    min-height: 120px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.stats-card:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.12);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+
+/* Icon Box */
+
+.stats-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    color: white;
+    flex-shrink: 0;
+}
+
+
+/* Different Icon Colors */
+
+.stats-icon.blue {
+    background: linear-gradient(135deg, #2563eb, #38bdf8);
+}
+
+.stats-icon.green {
+    background: linear-gradient(135deg, #16a34a, #4ade80);
+}
+
+.stats-icon.purple {
+    background: linear-gradient(135deg, #7c3aed, #c084fc);
+}
+
+.stats-icon.orange {
+    background: linear-gradient(135deg, #ea580c, #fb923c);
+}
+
+
+/* Content */
+
+.stats-content {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+
+.stats-title {
+    font-size: 14px;
+    color: #94a3b8;
+    font-weight: 500;
+}
+
+
+.stats-value {
+    font-size: 28px;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+
+/* Responsive */
+
+@media (max-width: 768px) {
+
+    .stats-card {
+        padding: 18px;
+        min-height: 100px;
+    }
+
+
+    .stats-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 22px;
+    }
+
+
+    .stats-value {
+        font-size: 24px;
+    }
+
+
+    .stats-title {
+        font-size: 13px;
+    }
+}
+
+
+@media (max-width: 480px) {
+
+    .stats-card {
+        border-radius: 16px;
+        gap: 12px;
+    }
+
+
+    .stats-icon {
+        width: 45px;
+        height: 45px;
+        font-size: 20px;
+    }
+
+
+    .stats-value {
+        font-size: 22px;
+    }
+}

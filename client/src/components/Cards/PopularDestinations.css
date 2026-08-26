@@ -1,0 +1,56 @@
+.popular-card{
+    background:#fff;
+    border-radius:16px;
+    padding:20px;
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+}
+
+.popular-header{
+    margin-bottom:20px;
+}
+
+.popular-header h2{
+    font-size:20px;
+    color:#333;
+}
+
+.destination-list{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+.destination-item{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:12px;
+    border-radius:12px;
+    background:#f8f9fc;
+    transition:.3s;
+}
+
+.destination-item:hover{
+    transform:translateY(-2px);
+}
+
+.destination-info h4{
+    margin:0;
+    color:#222;
+    font-size:16px;
+}
+
+.destination-info p{
+    margin-top:4px;
+    color:#777;
+    font-size:14px;
+}
+
+.rating{
+    background:#FFD700;
+    color:#222;
+    padding:6px 12px;
+    border-radius:20px;
+    font-weight:600;
+    font-size:13px;
+}

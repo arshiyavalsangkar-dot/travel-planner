@@ -1,0 +1,80 @@
+/* ==========================
+   Global
+========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html,
+body,
+#root{
+    width:100%;
+    min-height:100%;
+}
+
+/* ==========================
+   Light Theme
+========================== */
+
+body{
+    background: linear-gradient(
+        135deg,
+        #E8EEF9 0%,
+        #DCE8FF 35%,
+        #EDE5FF 70%,
+        #FFF3E8 100%
+    );
+
+    color:#1F2937;
+    font-family:"Poppins",sans-serif;
+    transition:.35s ease;
+}
+
+/* ==========================
+   Dark Theme
+========================== */
+
+body.dark{
+
+    background:linear-gradient(
+        135deg,
+        #050816 0%,
+        #0F172A 45%,
+        #111827 100%
+    );
+
+    color:white;
+}
+
+/* ==========================
+   Common Cards
+========================== */
+
+.card,
+.stats-card,
+.travel-chart-card,
+.dashboard-card{
+
+    background:#ffffff;
+
+    border-radius:22px;
+
+    box-shadow:
+    0 12px 35px rgba(0,0,0,.08);
+
+}
+
+body.dark .card,
+body.dark .stats-card,
+body.dark .travel-chart-card,
+body.dark .dashboard-card{
+
+    background:rgba(255,255,255,.08);
+
+    backdrop-filter:blur(20px);
+
+    color:white;
+}

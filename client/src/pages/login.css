@@ -1,0 +1,656 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:"Poppins",sans-serif;
+}
+
+body{
+overflow-x:hidden;
+}
+
+.login-page{
+    width:100%;
+    min-height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    padding:20px;
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+
+    position:relative;
+}
+
+.login-page::before{
+
+content:"";
+
+position:absolute;
+
+inset:0;
+
+background:linear-gradient(
+135deg,
+rgba(123,47,247,.15),
+rgba(255,122,24,.10),
+rgba(255,210,0,.08)
+);
+
+pointer-events:none;
+
+}
+
+.login-card{
+
+position:relative;
+z-index:2;
+
+width:430px;
+max-width:100%;
+
+padding:45px 35px;
+
+border-radius:30px;
+
+background:rgba(17,20,45,.28);
+
+backdrop-filter:blur(22px);
+-webkit-backdrop-filter:blur(22px);
+
+border:1px solid rgba(255,255,255,.18);
+
+box-shadow:
+0 20px 60px rgba(0,0,0,.45);
+
+animation:fadeUp .8s ease;
+
+}
+
+@keyframes fadeUp{
+
+from{
+
+opacity:0;
+transform:translateY(40px);
+
+}
+
+to{
+
+opacity:1;
+transform:translateY(0);
+
+}
+
+}
+
+.logo-box{
+
+width:90px;
+height:90px;
+
+margin:auto;
+margin-bottom:20px;
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+border-radius:50%;
+
+background:linear-gradient(
+135deg,
+#7B2FF7,
+#C026D3,
+#FF7A18,
+#FFD200
+);
+
+box-shadow:
+0 0 35px rgba(255,140,0,.45);
+
+}
+
+.plane-icon{
+
+font-size:35px;
+color:#fff;
+
+}
+
+.login-card h1{
+
+text-align:center;
+
+font-size:34px;
+
+font-weight:700;
+
+color:#fff;
+
+margin-bottom:8px;
+
+}
+
+.subtitle{
+
+text-align:center;
+
+color:#ddd;
+
+font-size:15px;
+
+margin-bottom:35px;
+
+line-height:24px;
+
+}
+
+.input-box{
+
+position:relative;
+
+margin-bottom:22px;
+
+}
+
+.input-icon{
+
+position:absolute;
+
+left:18px;
+
+top:50%;
+
+transform:translateY(-50%);
+
+color:#ffffff;
+
+font-size:16px;
+
+opacity:.8;
+
+}
+
+.input-box input{
+
+width:100%;
+
+height:58px;
+
+padding-left:52px;
+padding-right:55px;
+
+border-radius:15px;
+
+border:1px solid rgba(255,255,255,.18);
+
+background:rgba(255,255,255,.12);
+
+outline:none;
+
+color:#fff;
+
+font-size:15px;
+
+transition:.35s;
+
+}
+
+.input-box input::placeholder{
+
+color:#ddd;
+
+}
+
+.input-box input:focus{
+
+border:1px solid #ff8a00;
+
+box-shadow:
+
+0 0 20px rgba(255,136,0,.35);
+
+background:rgba(255,255,255,.18);
+
+}
+
+.eye-icon{
+
+position:absolute;
+
+right:18px;
+
+top:50%;
+
+transform:translateY(-50%);
+
+cursor:pointer;
+
+font-size:18px;
+
+color:#fff;
+
+transition:.3s;
+
+}
+
+.eye-icon:hover{
+
+color:#FFD200;
+
+}
+
+.forgot-row{
+
+display:flex;
+
+justify-content:flex-end;
+
+margin-bottom:25px;
+
+}
+
+.forgot-link{
+
+color:#FFD200;
+
+text-decoration:none;
+
+font-size:14px;
+
+transition:.3s;
+
+}
+
+.forgot-link:hover{
+
+color:#fff;
+
+}
+
+.login-btn{
+
+width:100%;
+
+height:58px;
+
+border:none;
+
+border-radius:15px;
+
+cursor:pointer;
+
+font-size:17px;
+
+font-weight:700;
+
+color:#fff;
+
+background:
+
+linear-gradient(
+90deg,
+#7B2FF7,
+#C026D3,
+#FF7A18,
+#FFD200
+);
+
+background-size:250%;
+
+transition:.4s;
+
+}
+
+.login-btn:hover{
+
+background-position:right;
+
+transform:translateY(-3px);
+
+box-shadow:
+
+0 12px 30px rgba(255,140,0,.45);
+
+}
+/* ===========================
+   Divider
+=========================== */
+
+.divider{
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+margin:28px 0;
+
+color:#fff;
+
+font-size:14px;
+
+}
+
+.divider::before,
+.divider::after{
+
+content:"";
+
+flex:1;
+
+height:1px;
+
+background:rgba(255,255,255,.25);
+
+}
+
+.divider span{
+
+margin:0 15px;
+
+opacity:.85;
+
+}
+
+
+/* ===========================
+   Google Button
+=========================== */
+
+.google-btn{
+
+width:100%;
+
+height:58px;
+
+border:none;
+
+border-radius:15px;
+
+background:rgba(255,255,255,.92);
+
+color:#222;
+
+font-size:16px;
+
+font-weight:600;
+
+display:flex;
+justify-content:center;
+align-items:center;
+gap:12px;
+
+cursor:pointer;
+
+transition:.35s;
+
+}
+
+.google-btn svg{
+
+font-size:22px;
+
+color:#EA4335;
+
+}
+
+.google-btn:hover{
+
+background:#fff;
+
+transform:translateY(-3px);
+
+box-shadow:
+0 10px 30px rgba(255,255,255,.25);
+
+}
+
+
+/* ===========================
+   Signup
+=========================== */
+
+.signup-text{
+
+margin-top:28px;
+
+text-align:center;
+
+font-size:15px;
+
+color:#fff;
+
+}
+
+.signup-link{
+
+margin-left:8px;
+
+text-decoration:none;
+
+font-weight:700;
+
+background:linear-gradient(
+90deg,
+#FFD200,
+#FF7A18,
+#C026D3
+);
+
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+
+transition:.3s;
+
+}
+
+.signup-link:hover{
+
+opacity:.8;
+
+}
+
+.input-box:hover input{
+
+border:1px solid rgba(255,255,255,.35);
+
+}
+
+
+/* ===========================
+   Card Hover
+=========================== */
+
+.login-card:hover{
+
+transform:translateY(-5px);
+
+transition:.35s;
+
+box-shadow:
+0 30px 70px rgba(0,0,0,.45);
+
+}
+
+
+/* ===========================
+   Scrollbar
+=========================== */
+
+::-webkit-scrollbar{
+
+width:8px;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+background:#8B5CF6;
+
+border-radius:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+background:#111827;
+
+}
+
+
+/* ===========================
+   Mobile
+=========================== */
+
+@media(max-width:768px){
+
+.login-page{
+
+padding:20px;
+
+background-position:center;
+
+}
+
+.login-card{
+
+width:100%;
+
+padding:35px 25px;
+
+border-radius:25px;
+
+}
+
+.logo-box{
+
+width:75px;
+
+height:75px;
+
+}
+
+.plane-icon{
+
+font-size:30px;
+
+}
+
+.login-card h1{
+
+font-size:28px;
+
+}
+
+.subtitle{
+
+font-size:14px;
+
+margin-bottom:25px;
+
+}
+
+.input-box input{
+
+height:54px;
+
+font-size:14px;
+
+}
+
+.login-btn{
+
+height:54px;
+
+font-size:16px;
+
+}
+
+.google-btn{
+
+height:54px;
+
+font-size:15px;
+
+}
+
+}
+
+
+/* ===========================
+   Small Mobile
+=========================== */
+
+@media(max-width:480px){
+
+.login-card{
+
+padding:30px 20px;
+
+}
+
+.login-card h1{
+
+font-size:25px;
+
+}
+
+.subtitle{
+
+font-size:13px;
+
+}
+
+.logo-box{
+
+width:68px;
+
+height:68px;
+
+}
+
+.plane-icon{
+
+font-size:28px;
+
+}
+
+.input-box{
+
+margin-bottom:18px;
+
+}
+
+.signup-text{
+
+font-size:14px;
+
+}
+
+}
+
+
+/* ===========================
+   Smooth Animation
+=========================== */
+
+.login-btn,
+.google-btn,
+.signup-link,
+.forgot-link,
+.eye-icon{
+
+transition:all .3s ease;
+
+}

@@ -1,0 +1,54 @@
+.quick-actions-card{
+    background:#fff;
+    border-radius:16px;
+    padding:20px;
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+}
+
+.quick-header{
+    margin-bottom:20px;
+}
+
+.quick-header h2{
+    font-size:20px;
+    color:#333;
+}
+
+.quick-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:15px;
+}
+
+.quick-btn{
+    border:none;
+    background:#6c3cff;
+    color:#fff;
+    border-radius:14px;
+    padding:20px;
+    cursor:pointer;
+    transition:.3s;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:10px;
+    font-size:15px;
+    font-weight:600;
+}
+
+.quick-btn:hover{
+    transform:translateY(-4px);
+    background:#5b2ee6;
+}
+
+.quick-icon{
+    font-size:24px;
+}
+
+@media(max-width:768px){
+
+    .quick-grid{
+        grid-template-columns:1fr;
+    }
+
+}

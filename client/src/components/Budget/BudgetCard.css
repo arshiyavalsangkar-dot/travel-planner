@@ -1,0 +1,16 @@
+.budget-card{
+    background:white;
+    border-radius:18px;
+    padding:25px;
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+    text-align:center;
+}
+
+.budget-card h3{
+    color:#666;
+    margin-bottom:15px;
+}
+
+.budget-card h1{
+    font-size:32px;
+}

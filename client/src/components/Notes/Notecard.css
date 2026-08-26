@@ -1,0 +1,25 @@
+.note-card{
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:white;
+padding:18px;
+margin-bottom:15px;
+border-radius:15px;
+box-shadow:0 8px 20px rgba(0,0,0,.08);
+}
+
+.note-card p{
+margin:0;
+font-size:16px;
+color:#333;
+}
+
+.note-card button{
+background:#E74C3C;
+color:white;
+border:none;
+padding:10px;
+border-radius:8px;
+cursor:pointer;
+}

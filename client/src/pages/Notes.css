@@ -1,0 +1,1836 @@
+/* ==========================================
+   NOTES PAGE LAYOUT
+========================================== */
+
+
+.notes-page{
+
+    padding:35px;
+
+    background:#f5f7fb;
+
+    min-height:100vh;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:35px;
+
+}
+
+
+
+
+
+/* ==========================================
+   HERO SECTION
+========================================== */
+
+
+.notes-hero{
+
+    position:relative;
+
+    overflow:hidden;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:60px;
+
+    border-radius:32px;
+
+    color:white;
+
+    background-image:
+        linear-gradient(rgba(8,15,35,.45), rgba(8,15,35,.45)),
+        url("/images/notes-banner.png");
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+
+    box-shadow:
+        0 25px 50px rgba(79,70,229,.25);
+
+}
+
+
+
+
+
+.notes-hero::after{
+
+
+    content:"";
+
+
+    position:absolute;
+
+
+    width:450px;
+
+
+    height:450px;
+
+
+    border-radius:50%;
+
+
+
+    right:-150px;
+
+
+    top:-150px;
+
+
+
+
+    background:
+
+    rgba(255,255,255,.12);
+
+
+
+}
+
+
+
+
+
+
+.notes-hero-left{
+
+
+    position:relative;
+
+
+    z-index:2;
+
+
+    max-width:650px;
+
+
+
+}
+
+
+
+
+
+
+.hero-tag{
+
+
+    display:inline-flex;
+
+
+    align-items:center;
+
+
+    gap:10px;
+
+
+
+    padding:10px 20px;
+
+
+
+    border-radius:40px;
+
+
+
+    background:
+
+    rgba(255,255,255,.18);
+
+
+
+    font-size:13px;
+
+
+
+    font-weight:700;
+
+
+
+    margin-bottom:25px;
+
+
+
+}
+
+
+
+
+
+
+.notes-hero-left h1{
+
+
+    font-size:50px;
+
+
+    line-height:1.2;
+
+
+
+    font-weight:800;
+
+
+
+    margin-bottom:20px;
+
+
+
+}
+
+
+
+
+
+
+.notes-hero-left p{
+
+
+    font-size:17px;
+
+
+
+    line-height:1.8;
+
+
+
+    opacity:.9;
+
+
+
+}
+
+
+
+
+
+
+/* ==========================================
+   HERO ICON
+========================================== */
+
+
+.notes-hero-right{
+
+
+    position:relative;
+
+
+    z-index:2;
+
+
+
+}
+
+
+
+
+
+.notes-hero-right svg{
+
+
+    font-size:160px;
+
+
+
+    opacity:.9;
+
+
+
+    filter:
+
+
+    drop-shadow(
+
+    0 15px 30px rgba(0,0,0,.25)
+
+    );
+
+
+
+}
+/* ==========================================
+   ADD NOTE FORM CARD
+========================================== */
+
+
+.note-form-card{
+
+
+    background:#ffffff;
+
+
+    border-radius:32px;
+
+
+    padding:40px;
+
+
+
+    box-shadow:
+
+
+    0 20px 45px rgba(0,0,0,.08);
+
+
+
+}
+
+
+
+
+
+/* ==========================================
+   CARD TITLE
+========================================== */
+
+
+.card-title{
+
+
+    margin-bottom:30px;
+
+
+
+}
+
+
+
+
+
+.card-title h2{
+
+
+    display:flex;
+
+
+    align-items:center;
+
+
+    gap:12px;
+
+
+
+    font-size:32px;
+
+
+
+    color:#111827;
+
+
+
+    margin-bottom:10px;
+
+
+
+}
+
+
+
+
+
+.card-title h2 svg{
+
+
+    color:#4f46e5;
+
+
+
+}
+
+
+
+
+
+.card-title p{
+
+
+    color:#6b7280;
+
+
+
+    font-size:15px;
+
+
+
+}
+
+
+
+
+
+
+/* ==========================================
+   NOTE FORM
+========================================== */
+
+
+.note-form{
+
+
+    display:flex;
+
+
+    flex-direction:column;
+
+
+
+    gap:25px;
+
+
+
+}
+
+
+
+
+
+.form-grid{
+
+
+    display:grid;
+
+
+
+    grid-template-columns:repeat(2,1fr);
+
+
+
+    gap:20px;
+
+
+
+}
+
+
+
+
+
+
+/* ==========================================
+   INPUT GROUP
+========================================== */
+
+
+.input-group{
+
+
+    display:flex;
+
+
+    align-items:center;
+
+
+
+    gap:15px;
+
+
+
+    background:#f8fafc;
+
+
+
+    padding:16px 20px;
+
+
+
+    border-radius:18px;
+
+
+
+    border:2px solid transparent;
+
+
+
+    transition:.3s;
+
+
+
+}
+
+
+
+
+
+
+.input-group:hover{
+
+
+    border-color:#c7d2fe;
+
+
+
+}
+
+
+
+
+
+.input-group:focus-within{
+
+
+    background:white;
+
+
+
+    border-color:#4f46e5;
+
+
+
+    box-shadow:
+
+
+    0 0 0 5px rgba(79,70,229,.08);
+
+
+
+}
+
+
+
+
+
+
+.input-group svg{
+
+
+    color:#4f46e5;
+
+
+    font-size:18px;
+
+
+
+}
+
+
+
+
+
+.input-group input,
+
+
+.input-group select{
+
+
+    width:100%;
+
+
+    border:none;
+
+
+    outline:none;
+
+
+
+    background:transparent;
+
+
+
+    font-size:15px;
+
+
+
+    color:#111827;
+
+
+
+}
+
+
+
+
+
+.input-group select{
+
+
+    cursor:pointer;
+
+
+
+}
+
+
+
+
+
+
+.input-group input::placeholder{
+
+
+    color:#9ca3af;
+
+
+
+}
+
+
+
+
+
+
+/* ==========================================
+   TEXTAREA
+========================================== */
+
+
+.textarea-box{
+
+
+    grid-column:span 2;
+
+
+    align-items:flex-start;
+
+
+
+}
+
+
+
+
+
+.textarea-box textarea{
+
+
+    width:100%;
+
+
+
+    min-height:140px;
+
+
+
+    resize:none;
+
+
+
+    border:none;
+
+
+
+    outline:none;
+
+
+
+    background:transparent;
+
+
+
+    font-size:15px;
+
+
+
+    color:#111827;
+
+
+
+    font-family:inherit;
+
+
+
+}
+
+
+
+
+
+
+.textarea-box textarea::placeholder{
+
+
+    color:#9ca3af;
+
+
+
+}
+
+
+
+
+
+
+/* ==========================================
+   ADD NOTE BUTTON
+========================================== */
+
+
+.add-note-btn{
+
+
+    width:100%;
+
+
+
+    padding:18px;
+
+
+
+    border:none;
+
+
+
+    border-radius:20px;
+
+
+
+    cursor:pointer;
+
+
+
+    display:flex;
+
+
+
+    justify-content:center;
+
+
+
+    align-items:center;
+
+
+
+    gap:12px;
+
+
+
+    background:linear-gradient(
+
+        135deg,
+
+        #4f46e5,
+
+        #7c3aed,
+
+        #9333ea
+
+    );
+
+
+
+    color:white;
+
+
+
+    font-size:16px;
+
+
+
+    font-weight:700;
+
+
+
+    transition:.35s;
+
+
+
+}
+
+
+
+
+
+.add-note-btn:hover{
+
+
+    transform:translateY(-4px);
+
+
+
+    box-shadow:
+
+
+    0 15px 35px rgba(79,70,229,.35);
+
+
+
+}
+/* ==========================================
+   NOTES LIST SECTION
+========================================== */
+
+
+.notes-list-section{
+
+
+    background:#ffffff;
+
+
+
+    padding:40px;
+
+
+
+    border-radius:32px;
+
+
+
+    box-shadow:
+
+
+    0 20px 45px rgba(0,0,0,.08);
+
+
+
+}
+
+
+
+
+
+
+/* ==========================================
+   SECTION HEADER
+========================================== */
+
+
+.section-header{
+
+
+    margin-bottom:30px;
+
+
+
+}
+
+
+
+
+
+.section-tag{
+
+
+    display:inline-block;
+
+
+
+    padding:8px 18px;
+
+
+
+    border-radius:30px;
+
+
+
+    background:#eef2ff;
+
+
+
+    color:#4f46e5;
+
+
+
+    font-size:13px;
+
+
+
+    font-weight:700;
+
+
+
+    letter-spacing:.5px;
+
+
+
+    margin-bottom:15px;
+
+
+
+}
+
+
+
+
+
+.section-header h2{
+
+
+    font-size:35px;
+
+
+
+    color:#111827;
+
+
+
+    margin-bottom:10px;
+
+
+
+}
+
+
+
+
+
+.section-header p{
+
+
+    color:#6b7280;
+
+
+
+    font-size:15px;
+
+
+
+}
+
+
+
+
+
+
+/* ==========================================
+   EMPTY NOTES
+========================================== */
+
+
+.empty-notes{
+
+
+    padding:70px 30px;
+
+
+
+    text-align:center;
+
+
+
+    border:2px dashed #dbe4ff;
+
+
+
+    border-radius:30px;
+
+
+
+    background:#fafbff;
+
+
+
+}
+
+
+
+
+
+.empty-notes .empty-icon{
+
+
+    font-size:75px;
+
+
+
+    color:#4f46e5;
+
+
+
+    margin-bottom:20px;
+
+
+
+}
+
+
+
+
+
+.empty-notes h2{
+
+
+    font-size:30px;
+
+
+
+    color:#111827;
+
+
+
+    margin-bottom:12px;
+
+
+
+}
+
+
+
+
+
+.empty-notes p{
+
+
+    color:#6b7280;
+
+
+
+}
+
+
+
+
+
+
+/* ==========================================
+   NOTES GRID
+========================================== */
+
+
+.notes-grid{
+
+
+    display:grid;
+
+
+
+    grid-template-columns:repeat(3,1fr);
+
+
+
+    gap:25px;
+
+
+
+}
+
+
+
+
+
+
+/* ==========================================
+   NOTE CARD
+========================================== */
+
+
+.note-card{
+
+
+    padding:30px;
+
+
+
+    border-radius:28px;
+
+
+
+    background:white;
+
+
+
+    border:1px solid #eef2ff;
+
+
+
+    box-shadow:
+
+
+    0 12px 30px rgba(0,0,0,.06);
+
+
+
+    transition:.35s;
+
+
+
+}
+
+
+
+
+
+.note-card:hover{
+
+
+    transform:translateY(-6px);
+
+
+
+    box-shadow:
+
+
+    0 20px 45px rgba(79,70,229,.15);
+
+
+
+}
+
+
+
+
+
+
+/* IMPORTANT NOTE */
+
+
+.note-card.important{
+
+
+    border:2px solid #facc15;
+
+
+
+    background:#fffbea;
+
+
+
+}
+
+
+
+
+
+
+/* ==========================================
+   CARD HEADER
+========================================== */
+
+
+.note-card-header{
+
+
+    display:flex;
+
+
+
+    justify-content:space-between;
+
+
+
+    align-items:flex-start;
+
+
+
+    margin-bottom:25px;
+
+
+
+}
+
+
+
+
+
+.note-card-header h3{
+
+
+    font-size:24px;
+
+
+
+    color:#111827;
+
+
+
+    margin-bottom:10px;
+
+
+
+}
+
+
+
+
+
+.note-card-header span{
+
+
+    display:inline-block;
+
+
+
+    padding:6px 14px;
+
+
+
+    border-radius:20px;
+
+
+
+    background:#eef2ff;
+
+
+
+    color:#4f46e5;
+
+
+
+    font-size:13px;
+
+
+
+    font-weight:600;
+
+
+
+}
+
+
+
+
+
+
+/* STAR ICON */
+
+
+.star{
+
+
+    color:#cbd5e1;
+
+
+
+    font-size:28px;
+
+
+
+    cursor:pointer;
+
+
+
+    transition:.3s;
+
+
+
+}
+
+
+
+
+
+.star:hover{
+
+
+    color:#facc15;
+
+
+
+    transform:scale(1.1);
+
+
+
+}
+
+
+
+
+
+.star-active{
+
+
+    color:#facc15;
+
+
+
+    font-size:30px;
+
+
+
+    cursor:pointer;
+
+
+
+}
+
+
+
+
+
+
+/* ==========================================
+   NOTE DESCRIPTION
+========================================== */
+
+
+.note-description{
+
+
+    background:#f8fafc;
+
+
+
+    padding:20px;
+
+
+
+    border-radius:20px;
+
+
+
+    margin-bottom:20px;
+
+
+
+}
+
+
+
+
+
+.note-description p{
+
+
+    color:#4b5563;
+
+
+
+    line-height:1.7;
+
+
+
+    font-size:15px;
+
+
+
+}
+/* ==========================================
+   DELETE NOTE BUTTON
+========================================== */
+
+
+.delete-note-btn{
+
+
+    width:100%;
+
+
+
+    padding:14px;
+
+
+
+    border:none;
+
+
+
+    border-radius:16px;
+
+
+
+    cursor:pointer;
+
+
+
+    background:linear-gradient(
+
+        135deg,
+
+        #ef4444,
+
+        #dc2626
+
+    );
+
+
+
+    color:white;
+
+
+
+    font-size:15px;
+
+
+
+    font-weight:600;
+
+
+
+    transition:.35s;
+
+
+
+}
+
+
+
+
+
+.delete-note-btn:hover{
+
+
+    transform:translateY(-3px);
+
+
+
+    box-shadow:
+
+
+    0 12px 25px rgba(220,38,38,.3);
+
+
+
+}
+
+
+
+
+
+
+/* ==========================================
+   CTA SECTION
+========================================== */
+
+
+.notes-cta{
+
+
+    padding:60px;
+
+
+
+    border-radius:32px;
+
+
+
+    text-align:center;
+
+
+
+    color:white;
+
+
+
+    background:linear-gradient(
+
+        135deg,
+
+        #4f46e5,
+
+        #7c3aed,
+
+        #9333ea
+
+    );
+
+
+
+    box-shadow:
+
+
+    0 25px 50px rgba(79,70,229,.25);
+
+
+
+}
+
+
+
+
+
+
+.cta-content h2{
+
+
+    font-size:42px;
+
+
+
+    font-weight:800;
+
+
+
+    margin-bottom:18px;
+
+
+
+}
+
+
+
+
+
+.cta-content p{
+
+
+    max-width:700px;
+
+
+
+    margin:auto;
+
+
+
+    line-height:1.8;
+
+
+
+    opacity:.9;
+
+
+
+}
+
+
+
+
+
+
+.cta-btn{
+
+
+    margin-top:30px;
+
+
+
+    padding:16px 35px;
+
+
+
+    border:none;
+
+
+
+    border-radius:50px;
+
+
+
+    cursor:pointer;
+
+
+
+    display:inline-flex;
+
+
+
+    align-items:center;
+
+
+
+    gap:12px;
+
+
+
+    background:white;
+
+
+
+    color:#4f46e5;
+
+
+
+    font-weight:700;
+
+
+
+    font-size:16px;
+
+
+
+    transition:.35s;
+
+
+
+}
+
+
+
+
+
+.cta-btn:hover{
+
+
+    transform:translateY(-5px);
+
+
+
+    box-shadow:
+
+
+    0 20px 40px rgba(255,255,255,.25);
+
+
+
+}
+
+
+
+
+
+
+/* ==========================================
+   PAGE ANIMATION
+========================================== */
+
+
+.notes-hero,
+
+.note-form-card,
+
+.notes-list-section,
+
+.note-card,
+
+.notes-cta{
+
+
+    animation:
+
+    notesFade .7s ease;
+
+
+
+}
+
+
+
+
+
+@keyframes notesFade{
+
+
+    from{
+
+
+        opacity:0;
+
+
+        transform:translateY(35px);
+
+
+    }
+
+
+
+    to{
+
+
+        opacity:1;
+
+
+        transform:translateY(0);
+
+
+    }
+
+
+}
+
+
+
+
+
+
+/* ==========================================
+   RESPONSIVE DESIGN
+========================================== */
+
+
+@media(max-width:1200px){
+
+
+    .notes-grid{
+
+
+        grid-template-columns:repeat(2,1fr);
+
+
+
+    }
+
+
+
+}
+
+
+
+
+
+
+@media(max-width:992px){
+
+
+    .notes-hero{
+
+
+        flex-direction:column;
+
+
+
+        text-align:center;
+
+
+
+    }
+
+
+
+
+
+    .form-grid{
+
+
+        grid-template-columns:1fr;
+
+
+
+    }
+
+
+
+
+
+    .textarea-box{
+
+
+        grid-column:auto;
+
+
+
+    }
+
+
+
+}
+
+
+
+
+
+
+@media(max-width:768px){
+
+
+    .notes-page{
+
+
+        padding:20px;
+
+
+
+    }
+
+
+
+
+
+    .notes-hero,
+
+    .note-form-card,
+
+    .notes-list-section,
+
+    .notes-cta{
+
+
+        padding:25px;
+
+
+
+    }
+
+
+
+
+
+    .notes-hero-left h1{
+
+
+        font-size:34px;
+
+
+
+    }
+
+
+
+
+
+    .notes-hero-right svg{
+
+
+        font-size:100px;
+
+
+
+    }
+
+
+
+
+
+    .notes-grid{
+
+
+        grid-template-columns:1fr;
+
+
+
+    }
+
+
+
+
+
+    .cta-content h2{
+
+
+        font-size:30px;
+
+
+
+    }
+
+
+
+}
+.note-form-buttons {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.update-note-btn {
+  background: #3b82f6 !important;
+}
+
+.cancel-note-btn {
+  padding: 12px 22px;
+  border: 1px solid #ef4444;
+  background: transparent;
+  color: #ef4444;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.cancel-note-btn:hover {
+  background: #ef4444;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+.note-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.edit-note-btn {
+  padding: 8px 16px;
+  border: 1px solid #3b82f6;
+  background: transparent;
+  color: #3b82f6;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.edit-note-btn:hover {
+  background: #3b82f6;
+  color: #fff;
+  transform: translateY(-2px);
+}

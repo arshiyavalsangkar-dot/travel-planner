@@ -1,0 +1,46 @@
+.destination-card{
+background:#fff;
+border-radius:20px;
+overflow:hidden;
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+transition:.3s;
+}
+
+.destination-card:hover{
+transform:translateY(-6px);
+}
+
+.destination-card img{
+width:100%;
+height:220px;
+object-fit:cover;
+}
+
+.destination-content{
+padding:20px;
+}
+
+.destination-content h2{
+margin-bottom:10px;
+}
+
+.destination-content p{
+margin:10px 0;
+color:#666;
+}
+
+.destination-content button{
+margin-top:15px;
+width:100%;
+padding:12px;
+background:#6C63FF;
+color:white;
+border:none;
+border-radius:10px;
+cursor:pointer;
+font-size:15px;
+}
+
+.destination-content button:hover{
+background:#564de0;
+}

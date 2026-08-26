@@ -1,0 +1,36 @@
+.itinerary-card{
+display:flex;
+background:white;
+padding:20px;
+border-radius:18px;
+box-shadow:0 8px 20px rgba(0,0,0,.08);
+margin-bottom:20px;
+}
+
+.time-box{
+width:120px;
+display:flex;
+align-items:center;
+justify-content:center;
+background:#6C63FF;
+color:white;
+border-radius:15px;
+margin-right:20px;
+}
+
+.details{
+flex:1;
+}
+
+.details h2{
+margin-bottom:10px;
+}
+
+.details p{
+color:#666;
+margin-bottom:10px;
+}
+
+.details span{
+color:#888;
+}

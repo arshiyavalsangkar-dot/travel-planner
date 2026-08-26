@@ -1,0 +1,62 @@
+.recent-trips-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.card-header {
+  margin-bottom: 20px;
+}
+
+.card-header h2 {
+  font-size: 20px;
+  color: #333;
+}
+
+.trip-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.trip-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  border-radius: 12px;
+  background: #f8f9fc;
+}
+
+.trip-item h4 {
+  margin: 0;
+  font-size: 16px;
+  color: #222;
+}
+
+.trip-item p {
+  margin-top: 5px;
+  color: #777;
+  font-size: 14px;
+}
+
+.status {
+  padding: 6px 12px;
+  border-radius: 20px;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.status.upcoming {
+  background: #4caf50;
+}
+
+.status.planned {
+  background: #ff9800;
+}
+
+.status.completed {
+  background: #2196f3;
+}
