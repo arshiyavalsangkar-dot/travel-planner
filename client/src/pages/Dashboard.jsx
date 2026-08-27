@@ -1,4 +1,5 @@
 import axios from "axios";
+const API_URL = "https://travel-planner-cf3c.onrender.com";
 import { useState, useEffect } from "react";
 import Sidebar from "../components/Sidebar/Sidebar";
 import Navbar from "../components/Navbar/Navbar";
@@ -43,7 +44,7 @@ export default function Dashboard() {
         const token = localStorage.getItem("token");
 
         const res = await axios.get(
-          "http://localhost:5000/api/dashboard",
+          `${API_URL}/api/dashboard`,
           {
             headers: {
               Authorization: `Bearer ${token}`,
@@ -69,7 +70,7 @@ export default function Dashboard() {
         const token = localStorage.getItem("token");
 
         const res = await axios.get(
-          "http://localhost:5000/api/packing",
+          `${API_URL}/api/packing`,
           {
             headers: {
               Authorization: `Bearer ${token}`,
@@ -131,7 +132,7 @@ export default function Dashboard() {
         const token = localStorage.getItem("token");
 
         const res = await axios.get(
-          "http://localhost:5000/api/trips",
+         `${API_URL}/api/trips`,
           {
             headers: {
               Authorization: `Bearer ${token}`,
