@@ -38,13 +38,12 @@ connectDB();
 const allowedOrigins = [
   "http://localhost:5173",
   "http://localhost:5174",
+  "https://travel-planner-9mxw-d1o2v0l02-travel-planner11.vercel.app",
 ];
 
 app.use(
   cors({
     origin: function (origin, callback) {
-      // Allow requests without origin
-      // such as Postman
       if (!origin) {
         return callback(null, true);
       }
@@ -54,9 +53,7 @@ app.use(
       }
 
       console.log("Blocked CORS Origin:", origin);
-      return callback(
-        new Error("Not allowed by CORS")
-      );
+      return callback(new Error("Not allowed by CORS"));
     },
 
     credentials: true,
