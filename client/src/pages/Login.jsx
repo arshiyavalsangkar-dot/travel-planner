@@ -46,7 +46,7 @@ function Login() {
       });
 
       const res = await axios.post(
-        "http://localhost:5000/api/auth/login",
+        "https://travel-planner-cf3c.onrender.com/api/auth/login",
         {
           email: form.email.trim(),
           password: form.password,
@@ -99,7 +99,7 @@ function Login() {
       console.log("Google credential received");
 
       const res = await axios.post(
-        "http://localhost:5000/api/auth/google",
+        "https://travel-planner-cf3c.onrender.com/api/auth/google",
         {
           credential: credentialResponse.credential,
         },
