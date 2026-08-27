@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
-import Sidebar from "../components/Sidebar/sidebar";
+import Sidebar from "../components/Sidebar/Sidebar";
 import Navbar from "../components/Navbar/Navbar";
 
 import TravelChart from "../components/Charts/TravelChart";
